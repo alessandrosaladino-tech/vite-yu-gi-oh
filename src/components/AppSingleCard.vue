@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <div class="col" v-for="card in state.cards">
+    <div class="col mb-3 mt-2" v-for="card in state.cards">
 
         <div class="card">
 
@@ -25,11 +25,11 @@ export default {
 
                 <div class="card-text">
 
-                    <div>
+                    <div class="name">
                         {{ card.name }}
                     </div>
 
-                    <div>
+                    <div class="type">
                         {{ card.archetype }}
                     </div>
 
@@ -49,16 +49,16 @@ export default {
     background-color: $yg_primary;
     height: 100px;
 
-    .name {
+    .name{
         color: white;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         text-align: center;
 
     }
 
-    .archetype {
+    .type {
         text-align: center;
     }
 }
