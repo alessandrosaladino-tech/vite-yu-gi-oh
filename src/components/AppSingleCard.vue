@@ -26,11 +26,11 @@ export default {
                 <div class="card-text">
 
                     <div>
-                        {{ state.name }}
+                        {{ card.name }}
                     </div>
 
                     <div>
-                        {{ state.archetype }}
+                        {{ card.archetype }}
                     </div>
 
                 </div>
