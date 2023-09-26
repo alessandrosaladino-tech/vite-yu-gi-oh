@@ -5,7 +5,7 @@ name:"AppSelect"
 </script>
 
 <template>
-   <div class="m-5">
+   <div class="ms-5 p-3">
         <select class="form-select" aria-label="Default select example" name="archetype" id="archetype">
             <option value="1" selected>Alien</option>
             <option value="2">Noble Knight</option>
