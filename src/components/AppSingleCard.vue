@@ -43,4 +43,23 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as *;
+.card-body {
+    background-color: $yg_primary;
+    height: 100px;
+
+    .name {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: center;
+
+    }
+
+    .archetype {
+        text-align: center;
+    }
+}
+</style>
