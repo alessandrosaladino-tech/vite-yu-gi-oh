@@ -15,22 +15,22 @@ export default {
 </script>
 
 <template>
-    <div class="col">
+    <div class="col" v-for="card in state.cards">
 
         <div class="card">
 
-            <img :src="state.cardImage" class="card-img-top" alt="...">
+            <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
 
             <div class="card-body">
 
                 <div class="card-text">
 
                     <div>
-                        {{ state.cardName }}
+                        {{ state.name }}
                     </div>
 
                     <div>
-                        {{ state.CardArchetype }}
+                        {{ state.archetype }}
                     </div>
 
                 </div>

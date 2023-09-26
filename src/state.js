@@ -3,9 +3,7 @@ import axios from 'axios';
 
 export const state = reactive({
     base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
-    cardName: null,
-    cardImage: null,
-    cardArchetype: null,
+   cards: null,
 
    
         fetchData() {
@@ -14,9 +12,7 @@ export const state = reactive({
                 .get(this.base_urlurl)
                 .then(response => {
 
-                    this.cardName = response.data.name;
-                    this.cardImage = response.data.card_images.image_url;
-                    this.cardArchetype = response.data.archetype;
+                    this.cards = response.data.data
 
                 })
                 .catch(error => {
