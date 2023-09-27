@@ -13,7 +13,7 @@ export const state = reactive({
     fetchData(url) {
 
         axios
-            .get(this.base_url)
+            .get(url)
             .then(response => {
 
                 this.status = true 
@@ -27,7 +27,7 @@ export const state = reactive({
 
     },
 
-    fetchDataArchetypes(url, i) {
+    fetchDataArchetypes(url) {
         axios
             .get(url)
             .then(response => {
