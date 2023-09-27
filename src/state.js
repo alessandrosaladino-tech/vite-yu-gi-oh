@@ -16,6 +16,7 @@ export const state = reactive({
             .get(this.base_url)
             .then(response => {
 
+                this.status = true 
                 this.cards = response.data.data
                 console.log(this.cards);
 
