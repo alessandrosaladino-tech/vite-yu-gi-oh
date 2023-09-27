@@ -14,7 +14,7 @@ data() {
 </script>
 
 <template>
-   <div class="ms-5 p-3">
+   <div class=" p-3">
          <select class="form-select" aria-label="Default select example" name="archetype" id="archetype"
             @change="$emit('searchTheArchetype')" v-model="this.state.archetypeName">
             <option placeholder="Select Archetype" disabled>Select Archetype</option>

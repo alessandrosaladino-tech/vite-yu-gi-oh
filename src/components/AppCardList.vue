@@ -15,6 +15,7 @@ export default {
         state.fetchData(this.state.base_url);
     },
 
+
     components: {
         AppSingleCard,
         AppReloader,

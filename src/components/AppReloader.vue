@@ -1,6 +1,8 @@
 <script>
 export default {
-    name: 'AppReloader'
+    name: 'AppReloader',
+
+ 
 }
 </script>
 
