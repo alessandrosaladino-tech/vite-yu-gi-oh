@@ -4,6 +4,7 @@ import AppSelect from "./AppSelect.vue";
 import AppCardList from "./AppCardList.vue";
 export default {
     name: "AppMain",
+    emit: ["searchTheArchetype"],
     components: {
         AppSelect,
         AppCardList,
@@ -35,7 +36,7 @@ export default {
 <template>
     <main>
         <div class="container">
-            <AppSelect @search-by-archetype="searchArchetype"></AppSelect>
+            <AppSelect @search-the-archetype="searchArchetype"></AppSelect>
 
             <AppCardList></AppCardList>
         </div>

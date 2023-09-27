@@ -3,7 +3,10 @@ import { state } from '../state.js';
 
 export default {
     name: 'AppSingleCard',
-    props: ["card"],
+    props: {
+        card:Object,
+    },
+    
     data() {
         return {
             state
