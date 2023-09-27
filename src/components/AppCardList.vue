@@ -15,7 +15,7 @@ export default {
         state.fetchData(this.state.base_url);
     },
 
-    components:{
+    components: {
         AppSingleCard,
         AppReloader,
     }
@@ -26,7 +26,7 @@ export default {
     <div class="card_list">
 
         <div class="found">
-            Found X cards
+            Found {{ state.cards.length }} cards
         </div>
 
         <AppReloader v-if="state.status"></AppReloader>
