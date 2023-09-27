@@ -29,7 +29,7 @@ export default {
             Found X cards
         </div>
 
-        <AppReloader v-if="!state.status"></AppReloader>
+        <AppReloader v-if="state.status"></AppReloader>
         <div v-else class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
             <AppSingleCard :card="card" v-for="card in state.cards"></AppSingleCard>
         </div>

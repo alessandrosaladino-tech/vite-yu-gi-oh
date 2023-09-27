@@ -5,7 +5,7 @@ export const state = reactive({
     base_url: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0 ",
     archetype_url: "https://db.ygoprodeck.com/api/v7/archetypes.php",
     cards: "",
-    status: false,
+    status: true,
     archetypeName: '',
     archetypeList: '',
 
@@ -16,7 +16,7 @@ export const state = reactive({
             .get(url)
             .then(response => {
 
-                this.status = true 
+                this.status = false 
                 this.cards = response.data.data
                 console.log(this.cards);
 
