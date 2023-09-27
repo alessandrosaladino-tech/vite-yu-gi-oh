@@ -1,7 +1,18 @@
 <script>
 import AppSingleCard from './AppSingleCard.vue';
+import { state } from '../state.js';
 export default {
     name: 'AppCardList',
+
+    data() {
+        return {
+            state
+        }
+    },
+
+    created() {
+        state.fetchData(this.state.base_url);
+    },
 
     components:{
         AppSingleCard
@@ -17,7 +28,7 @@ export default {
         </div>
 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
-            <AppSingleCard />
+            <AppSingleCard :card="card" v-for="card in state.cards"></AppSingleCard>
         </div>
 
     </div>

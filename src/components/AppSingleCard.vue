@@ -3,6 +3,7 @@ import { state } from '../state.js';
 
 export default {
     name: 'AppSingleCard',
+    props: ["card"],
     data() {
         return {
             state
@@ -15,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <div class="col mb-3 mt-2" v-for="card in state.cards">
+    <div class="col mb-3 mt-2" >
 
         <div class="card">
 
@@ -45,18 +46,20 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
+
+
+.name {
+    color: $yg_white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: center;
+
+}
+
 .card-body {
     background-color: $yg_primary;
     height: 100px;
-
-    .name{
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.7rem;
-        text-align: center;
-
-    }
 
     .type {
         text-align: center;
