@@ -1,6 +1,7 @@
 <script>
 import AppSingleCard from './AppSingleCard.vue';
 import AppReloader from './AppReloader.vue';
+import AppFoundedCards from './AppFoundedCards.vue';
 import { state } from '../state.js';
 export default {
     name: 'AppCardList',
@@ -19,6 +20,7 @@ export default {
     components: {
         AppSingleCard,
         AppReloader,
+        AppFoundedCards,
     }
 }
 </script>
@@ -26,9 +28,7 @@ export default {
 <template>
     <div class="card_list">
 
-        <div class="found">
-            Found {{ state.cards.length }} cards
-        </div>
+        <AppFoundedCards/>
 
         <AppReloader v-if="state.status"></AppReloader>
         <div v-else class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
@@ -44,11 +44,5 @@ export default {
 .card_list {
     background-color: $yg_white;
     padding: 3rem;
-
-    .found {
-        background-color: $yg_dark;
-        color: $yg_white;
-        padding: 1rem;
-    }
 }
 </style>
